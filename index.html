@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#350b18">
+  <meta name="description" content="Свадебное приглашение David & Unona — 6 июня 2027 года, Актау.">
+  <title>David & Unona — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <button class="music-button" id="musicToggle" type="button" aria-label="Включить музыку">
+    <span class="music-icon" aria-hidden="true">♫</span><span id="musicLabel">Включить музыку</span>
+  </button>
+  <audio id="weddingMusic" loop preload="none">
+    <source src="assets/piano.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <section class="cover" id="cover">
+      <div class="cover-frame"></div>
+      <div class="cover-content reveal">
+        <p class="eyebrow">A WEDDING INVITATION</p>
+        <div class="seal" aria-hidden="true"><span>D <i>&</i> U</span></div>
+        <h1>David <span class="ampersand">&</span><br>Unona</h1>
+        <p class="cover-date">06 · 06 · 2027 <span>—</span> AKTAU</p>
+        <p class="cover-line">Two hearts. One forever.</p>
+        <button class="open-invitation" id="openInvitation" type="button">
+          <span>Открыть приглашение</span><span class="arrow">↓</span>
+        </button>
+        <p class="tiny-note">С любовью приглашаем вас разделить наш день</p>
+      </div>
+      <div class="cover-bottom">SCROLL TO DISCOVER <span>↓</span></div>
+    </section>
+
+    <section class="welcome section-pad">
+      <div class="section-kicker reveal">WITH LOVE, FROM US TO YOU</div>
+      <div class="ornament reveal">✦ <span>✦</span> ✦</div>
+      <h2 class="reveal">День, который станет<br><em>нашей общей историей</em></h2>
+      <p class="intro-copy reveal">Есть моменты, которые становятся ещё прекраснее, когда рядом самые дорогие люди. Мы будем счастливы, если вы разделите с нами начало нашей семейной истории.</p>
+      <div class="date-card reveal">
+        <span class="date-side">ВОСКРЕСЕНЬЕ</span>
+        <div class="date-number">06 <span>·</span> 06 <span>·</span> 2027</div>
+        <span class="date-side">АКТАУ, КАЗАХСТАН</span>
+      </div>
+    </section>
+
+    <section class="countdown-section section-pad">
+      <div class="section-kicker reveal">THE COUNTDOWN</div>
+      <h2 class="reveal">До нашего дня осталось</h2>
+      <div class="countdown reveal" id="countdown" aria-label="Обратный отсчёт">
+        <div><strong id="days">000</strong><span>дней</span></div>
+        <i>:</i><div><strong id="hours">00</strong><span>часов</span></div>
+        <i>:</i><div><strong id="minutes">00</strong><span>минут</span></div>
+        <i>:</i><div><strong id="seconds">00</strong><span>секунд</span></div>
+      </div>
+      <p class="countdown-note reveal">Каждый день приближает нас к моменту, который мы будем помнить всю жизнь.</p>
+    </section>
+
+    <section class="photos-section section-pad">
+      <div class="section-kicker reveal">OUR MOMENTS</div>
+      <h2 class="reveal">Немного <em>нашей истории</em></h2>
+      <p class="section-copy reveal">Здесь будут фотографии, которые расскажут о нас без слов.</p>
+      <div class="photo-grid reveal">
+        <figure class="photo photo-large">
+          <img src="assets/photo-1.jpg" alt="Фотография David и Unona" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder')">
+          <figcaption>our story</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="assets/photo-2.jpg" alt="Совместная фотография David и Unona" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder')">
+          <figcaption>little moments</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="assets/photo-3.jpg" alt="Совместная фотография David и Unona" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder')">
+          <figcaption>forever starts here</figcaption>
+        </figure>
+      </div>
+      <p class="photo-tip">Подсказка: замените файлы photo-1.jpg, photo-2.jpg и photo-3.jpg в папке assets своими фотографиями.</p>
+    </section>
+
+    <section class="details-section section-pad">
+      <div class="section-kicker reveal">THE CELEBRATION</div>
+      <h2 class="reveal">Будем ждать <em>вас</em></h2>
+      <div class="venue-card reveal">
+        <div class="venue-number">I</div>
+        <p class="eyebrow">THE WEDDING RECEPTION</p>
+        <h3>Qaraqat Hall</h3>
+        <p class="venue-location">Актау, Казахстан</p>
+        <div class="gold-rule"></div>
+        <div class="venue-time"><span>06 июня 2027</span><span>18:00</span></div>
+        <p class="venue-note">Вечер любви, радости и тёплых встреч.</p>
+        <a class="outline-button" href="https://www.google.com/maps/search/?api=1&query=Qaraqat+Hall+Aktau+Kazakhstan" target="_blank" rel="noopener">Открыть карту <span>↗</span></a>
+        <p class="map-note">Карта открывает поиск по названию ресторана. Если место не определится точно, уточните адрес у организаторов.</p>
+      </div>
+    </section>
+
+    <section class="kindness-section section-pad">
+      <div class="ornament reveal">✦ <span>✦</span> ✦</div>
+      <p class="eyebrow reveal">JUST COME AS YOU ARE</p>
+      <h2 class="reveal">Самое красивое —<br><em>это вы</em></h2>
+      <p class="kindness-copy reveal">Мы не устанавливаем дресс-код и не ждём от вас ничего особенного. Приходите такими, какие вы есть, — в том, в чём вам комфортно и красиво. Вы уже прекрасны, а ваше присутствие станет для нас самым ценным подарком.</p>
+    </section>
+
+    <section class="rsvp-section section-pad" id="rsvp">
+      <div class="section-kicker reveal">KINDLY REPLY</div>
+      <h2 class="reveal">Будете с нами?</h2>
+      <p class="section-copy reveal">Пожалуйста, заполните форму, чтобы мы могли подготовиться к встрече с вами.</p>
+      <form class="rsvp-form reveal" id="rsvpForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="RSVP — David & Unona Wedding">
+        <div class="field">
+          <label for="guestName">Ваше имя</label>
+          <input id="guestName" name="Имя гостя" autocomplete="name" required placeholder="Как к вам обращаться?">
+        </div>
+        <div class="field">
+          <label for="attendance">Сможете присутствовать?</label>
+          <select id="attendance" name="Присутствие" required>
+            <option value="" disabled selected>Выберите ответ</option>
+            <option value="Да, с радостью буду">Да, с радостью буду</option>
+            <option value="Буду не один / одна">Буду не один / одна</option>
+            <option value="К сожалению, не смогу">К сожалению, не смогу</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="guestsCount">Сколько человек придёт вместе с вами?</label>
+          <select id="guestsCount" name="Количество гостей">
+            <option>Только я</option><option>2 человека</option><option>3 человека</option><option>4 человека</option><option>5 и более</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Пожелание для нас (необязательно)</label>
+          <textarea id="message" name="Пожелание" rows="3" placeholder="Пара тёплых слов..."></textarea>
+        </div>
+        <button class="submit-button" type="submit">Отправить ответ <span>→</span></button>
+        <p class="form-status" id="formStatus" role="status"></p>
+        <p class="form-setup-note">Перед публикацией подключите Formspree по инструкции в README.md и замените YOUR_FORM_ID в файле index.html.</p>
+      </form>
+    </section>
+
+    <footer class="footer section-pad">
+      <div class="footer-monogram">D <span>&</span> U</div>
+      <p class="footer-names">David & Unona</p>
+      <p class="footer-date">06 · 06 · 2027 — AKTAU</p>
+      <p class="footer-thanks">Спасибо, что вы — часть нашей истории.</p>
+      <div class="footer-flourish">✦</div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
